@@ -1,0 +1,6 @@
+{
+  "name": "Melli Groupe",
+  "description": "Site internet premium et professionnel pour Melli Groupe, regroupant les univers Melli Gestion (secrétariat, accompagnement spécialisé) et Melli Création (création digitale, branding, communication).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
