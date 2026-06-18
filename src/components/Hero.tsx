@@ -131,18 +131,20 @@ export default function Hero() {
               
               {/* Testimonial Box inside right visual, from mockup */}
               <div className="relative z-10 p-4 rounded-lg bg-white/5 backdrop-blur-[10px] border-l-2 border-gold text-left">
-                <div className="flex text-gold space-x-0.5 mb-1">
+                <div className="flex text-gold space-x-0.5 mb-1.5">
                   <Star className="w-3 h-3 fill-gold text-gold" />
                   <Star className="w-3 h-3 fill-gold text-gold" />
                   <Star className="w-3 h-3 fill-gold text-gold" />
                   <Star className="w-3 h-3 fill-gold text-gold" />
                   <Star className="w-3 h-3 fill-gold text-gold" />
                 </div>
-                <p className="text-[11px] text-gray-200 italic font-light leading-relaxed">
-                  "Un accompagnement d'une rigueur exceptionnelle. Melli Groupe a totalement restructuré ma gestion administrative et ma présence en ligne."
-                </p>
-                <div className="text-[9px] uppercase tracking-wider text-rose-gold font-bold mt-2">
-                  — Sarah L., Gérante de Cabinet
+                <div className="text-[11px] text-gray-200 italic font-light leading-relaxed space-y-2">
+                  <p>
+                    "En tant que fondatrice de MELLI GROUPE, je suis aujourd’hui très heureuse d’accompagner les particuliers, entrepreneurs, associations et entreprises dans le développement de leurs projets."
+                  </p>
+                </div>
+                <div className="text-[9px] uppercase tracking-wider text-rose-gold font-bold mt-3">
+                  — MELLI – PDG
                 </div>
               </div>
             </div>

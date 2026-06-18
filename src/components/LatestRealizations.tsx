@@ -26,6 +26,18 @@ export default function LatestRealizations() {
       brandName: "AC HABITAT",
       brandSub: "76 RENOVATION",
       isPremium: true
+    },
+    {
+      id: "site-3",
+      title: "LAYI ACADEMY",
+      subtitle: "Espace de formation et d'enseignement d'excellence",
+      sector: "Formation & Éducation",
+      demoUrl: "layi-academy.fr",
+      realUrl: "https://layi-academy.fr/",
+      colorTheme: "from-purple-950 via-stone-900 to-indigo-950/40",
+      brandName: "LAYI ACADEMY",
+      brandSub: "EXCELLENCE ACADÉMIQUE",
+      isPremium: true
     }
   ];
 
@@ -46,8 +58,8 @@ export default function LatestRealizations() {
           </p>
         </div>
 
-        {/* Websites Grid - centered for 2 elements */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* Websites Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {websites.map((site) => (
             <motion.a
               key={site.id}

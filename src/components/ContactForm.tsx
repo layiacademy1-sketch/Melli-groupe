@@ -138,7 +138,7 @@ export default function ContactForm() {
                 <div>
                   <span className="text-xs text-gray-500 block uppercase tracking-wider font-semibold">Localisation</span>
                   <span className="text-gray-700 leading-relaxed font-semibold">
-                    Paris
+                    Île-de-France
                   </span>
                 </div>
               </div>
