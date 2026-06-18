@@ -91,7 +91,7 @@ export default function Realizations() {
                         <span className="w-2 h-2 rounded-full bg-yellow-500/60" />
                         <span className="w-2 h-2 rounded-full bg-green-500/60" />
                         <div className="w-full max-w-[140px] bg-white border border-gray-150 rounded-md h-3.5 mx-auto flex items-center px-2">
-                           <span className="text-[7px] text-gray-400 truncate">melli-groupe.fr/projet</span>
+                           <span className="text-[7px] text-gray-400 truncate">melli-pro.fr/projet</span>
                         </div>
                       </div>
                       {/* Browser webpage content render */}
