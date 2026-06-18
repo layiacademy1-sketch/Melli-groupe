@@ -8,6 +8,7 @@ import MelliCreationPage from './components/MelliCreationPage';
 import Realizations from './components/Realizations';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
+import LatestRealizations from './components/LatestRealizations';
 import ContactForm from './components/ContactForm';
 import WhatsappButton from './components/WhatsappButton';
 import Footer from './components/Footer';
@@ -58,6 +59,9 @@ export default function App() {
           <>
             {/* Banner with picture */}
             <Hero />
+
+            {/* Latest website realizations */}
+            <LatestRealizations />
 
             {/* Integrated form */}
             <ContactForm />

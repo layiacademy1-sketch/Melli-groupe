@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowDown, Star } from 'lucide-react';
 import { motion } from 'motion/react';
 // @ts-ignore
-import heroImg from '../assets/images/hero_entrepreneur_1781795257207.jpg';
+import heroImg from '../assets/images/hero_entrepreneur_new.jpg';
 // @ts-ignore
 import logoTransparent from '../assets/images/logo-transparent.png';
 
