@@ -191,13 +191,15 @@ export default function MelliCreationPage({ onBack, onContactClick }: MelliCreat
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-gray-100">
-                  <button
-                    onClick={() => onContactClick(service.title)}
+                  <a
+                    href={`https://wa.me/33756888535?text=${encodeURIComponent("Bonjour MELLI GROUPE, je souhaite en savoir plus sur votre service de CRÉATION : " + service.title)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center justify-between w-full text-xs font-semibold uppercase tracking-widest text-[#B88E4C] hover:text-[#D4AF37] transition-all cursor-pointer"
                   >
                     <span>En savoir plus</span>
                     <ChevronRight className="w-4 h-4 translate-x-0 group-hover:translate-x-1.5 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             );

@@ -82,10 +82,15 @@ export default function MelliGestion() {
                   </ul>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-gray-500 group-hover:text-gold transition-all">
+                <a
+                  href={`https://wa.me/33756888535?text=${encodeURIComponent("Bonjour MELLI GROUPE, je souhaite en savoir plus sur votre service de GESTION : " + service.title)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-gray-500 hover:text-gold group-hover:text-gold transition-all"
+                >
                   <span>En savoir plus</span>
                   <ChevronRight className="w-4 h-4 translate-x-0 group-hover:translate-x-1.5 transition-transform" />
-                </div>
+                </a>
               </motion.div>
             );
           })}

@@ -25,26 +25,59 @@ export default function ContactForm() {
     }
 
     setStatus('loading');
+    
+    // Construct beautifully formatted message text for WhatsApp
+    const messageText = `*Nouvelle Demande de Contact MELLI GROUPE*\n\n` +
+      `✍️ *Nom* : ${formData.nom}\n` +
+      `👤 *Prénom* : ${formData.prenom || 'Non renseigné'}\n` +
+      `📞 *Téléphone* : ${formData.phone || 'Non renseigné'}\n` +
+      `✉️ *Email* : ${formData.email}\n` +
+      `📁 *Projet / Univers* : ${formData.projectType}\n\n` +
+      `💬 *Message* :\n${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/33756888535?text=${encodeURIComponent(messageText)}`;
+
     try {
       const response = await submitContactForm(formData);
-      if (response.success) {
+      
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
+      
+      if (response && response.success) {
         setStatus('success');
         setSaveSource(response.source);
-        // Clear form
-        setFormData({
-          nom: '',
-          prenom: '',
-          phone: '',
-          email: '',
-          projectType: 'Melli Gestion',
-          message: ''
-        });
       } else {
-        setStatus('error');
+        setStatus('success');
+        setSaveSource('local');
       }
+      
+      // Clear form
+      setFormData({
+        nom: '',
+        prenom: '',
+        phone: '',
+        email: '',
+        projectType: 'Melli Gestion',
+        message: ''
+      });
     } catch (err) {
       console.error("Submission error:", err);
-      setStatus('error');
+      
+      // Open WhatsApp anyway even if database save returns error
+      window.open(whatsappUrl, '_blank');
+      
+      setStatus('success');
+      setSaveSource('local');
+      
+      // Clear form
+      setFormData({
+        nom: '',
+        prenom: '',
+        phone: '',
+        email: '',
+        projectType: 'Melli Gestion',
+        message: ''
+      });
     }
   };
 

@@ -5,35 +5,26 @@ export default function LatestRealizations() {
   const websites = [
     {
       id: "site-1",
-      title: "Cabinet d'Avocats Dumas",
-      subtitle: "Site vitrine juridique haut de gamme",
-      sector: "Secteur Droit & Prestige",
-      demoUrl: "melli-groupe.fr/projet-dumas",
-      colorTheme: "from-zinc-950 via-slate-900 to-zinc-900",
-      brandName: "DUMAS",
-      brandSub: "AVOCATS",
+      title: "RED FIRST SERVICES",
+      subtitle: "Plateforme de services professionnels et logistiques",
+      sector: "Multiservices & Logistique",
+      demoUrl: "redfirst-services.com",
+      realUrl: "https://redfirst-services.com/",
+      colorTheme: "from-red-950 via-neutral-900 to-amber-950/20",
+      brandName: "RED FIRST",
+      brandSub: "SERVICES",
       isPremium: true
     },
     {
       id: "site-2",
-      title: "L'Atelier Culinaire",
-      subtitle: "Site de réservation premium",
-      sector: "Restaurant Gastronomique",
-      demoUrl: "melli-groupe.fr/projet-culinaire",
-      colorTheme: "from-amber-950/80 via-stone-900 to-stone-950",
-      brandName: "L'ATELIER",
-      brandSub: "CULINAIRE",
-      isPremium: true
-    },
-    {
-      id: "site-3",
-      title: "Horizon Immobilier",
-      subtitle: "Portail d'annonces de biens d'exception",
-      sector: "Immobilier de Prestige",
-      demoUrl: "melli-groupe.fr/projet-horizon",
-      colorTheme: "from-neutral-950 via-neutral-900 to-zinc-900",
-      brandName: "HORIZON",
-      brandSub: "IMMOBILIER DE LUXE",
+      title: "AC HABITAT 76",
+      subtitle: "Site d'artisanat, rénovation et travaux du bâtiment",
+      sector: "Rénovation & Habitat",
+      demoUrl: "ac-habita76.fr",
+      realUrl: "https://ac-habita76.fr",
+      colorTheme: "from-sky-950 via-slate-900 to-neutral-950",
+      brandName: "AC HABITAT",
+      brandSub: "76 RENOVATION",
       isPremium: true
     }
   ];
@@ -55,16 +46,19 @@ export default function LatestRealizations() {
           </p>
         </div>
 
-        {/* Websites Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Websites Grid - centered for 2 elements */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {websites.map((site) => (
-            <motion.div
+            <motion.a
               key={site.id}
+              href={site.realUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="group relative rounded-2xl bg-bg-card border border-gold/15 hover:border-gold/40 transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-sm gold-glow-hover"
+              className="group relative rounded-2xl bg-bg-card border border-gold/15 hover:border-gold/50 hover:bg-white transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-sm gold-glow-hover cursor-pointer"
             >
               {/* Premium browser placeholder visualization */}
               <div className="p-6 bg-gradient-to-b from-gray-50 to-white border-b border-gray-100 flex items-center justify-center min-h-[220px] relative overflow-hidden">
@@ -92,7 +86,7 @@ export default function LatestRealizations() {
                         {site.brandName}
                       </span>
                       <span className="text-[5px] text-gold border border-gold/40 px-1 py-0.2 rounded font-semibold uppercase tracking-wider">
-                        PORTAL
+                        LIVE SITE
                       </span>
                     </div>
                     
@@ -107,7 +101,7 @@ export default function LatestRealizations() {
                     </div>
 
                     <div className="flex justify-between items-center z-10 pt-1 border-t border-white/5">
-                      <span className="text-[5px] text-gray-500 tracking-wider">EXCELLENCE CERTIFIED</span>
+                      <span className="text-[5px] text-gray-400 tracking-wider">VISITEZ LE SITE EN DIRECT</span>
                       <span className="text-[6px] text-gold font-bold uppercase flex items-center gap-0.5">
                         PRESTIGE <Sparkles className="w-1.5 h-1.5 fill-gold animate-pulse text-gold" />
                       </span>
@@ -147,7 +141,7 @@ export default function LatestRealizations() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
